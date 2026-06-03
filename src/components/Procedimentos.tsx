@@ -88,11 +88,11 @@ export default function Procedimentos({ onOpenModal }: ProcedimentosProps) {
   };
 
   return (
-    <section id="procedimentos" className="py-24 bg-brand-light relative z-20">
+    <section id="procedimentos" className="py-16 md:py-20 bg-brand-light relative z-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Cabeçalho */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-[11px] font-sans font-bold tracking-[0.25em] text-brand-gold uppercase block mb-3">
             Menu de Tratamentos
           </span>

@@ -10,11 +10,11 @@ export default function Localizacao() {
   };
 
   return (
-    <section id="localizacao" className="py-24 bg-neutral-50/50 border-t border-neutral-100">
+    <section id="localizacao" className="py-16 md:py-20 bg-neutral-50/50 border-t border-neutral-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Cabeçalho */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-[11px] font-sans font-bold tracking-[0.25em] text-brand-gold uppercase block mb-3">
             Onde Estamos
           </span>

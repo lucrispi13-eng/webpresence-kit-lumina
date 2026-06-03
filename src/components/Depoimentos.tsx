@@ -39,7 +39,7 @@ export default function Depoimentos() {
   ];
 
   return (
-    <section id="depoimentos" className="py-24 bg-neutral-50/50 relative overflow-hidden">
+    <section id="depoimentos" className="py-16 md:py-20 bg-neutral-50/50 relative overflow-hidden">
       
       {/* Elementos visuais discretos decorativos */}
       <div className="absolute top-1/2 left-0 w-72 h-72 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none" />
@@ -47,7 +47,7 @@ export default function Depoimentos() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Cabeçalho da Seção */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between mb-16 gap-8 text-center lg:text-left">
+        <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between mb-12 gap-8 text-center lg:text-left">
           <div className="max-w-2xl">
             <span className="text-[11px] font-sans font-bold tracking-[0.25em] text-brand-gold uppercase block mb-3">
               Elite em Depoimentos

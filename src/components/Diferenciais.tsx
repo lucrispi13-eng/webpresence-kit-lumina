@@ -32,12 +32,12 @@ export default function Diferenciais() {
   return (
     <section 
       id="diferenciais" 
-      className="py-24 bg-neutral-50/50 border-t border-b border-neutral-100"
+      className="py-16 md:py-20 bg-neutral-50/50 border-t border-b border-neutral-100"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Cabeçalho da Seção */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-[11px] font-sans font-bold tracking-[0.25em] text-brand-gold uppercase block mb-3">
             O Padrão Lumina
           </span>
@@ -49,7 +49,7 @@ export default function Diferenciais() {
             Combinamos ciência médica avançada, tecnologia de ponta e sensibilidade artística para entregar uma jornada premium inigualável.
           </p>
         </div>
-
+ 
         {/* Grid de Diferenciais */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {pilares.map((pilar, index) => {
@@ -58,7 +58,7 @@ export default function Diferenciais() {
               <div 
                 key={pilar.id}
                 id={pilar.id}
-                className="bg-brand-light border border-neutral-200/60 p-8 hover:border-brand-sage/40 hover:shadow-xl transition-all duration-300 group flex flex-col focus-within:ring-2 focus-within:ring-brand-sage"
+                className="bg-brand-light border border-neutral-200/60 p-6 sm:p-7 hover:border-brand-sage/40 hover:shadow-xl transition-all duration-300 group flex flex-col focus-within:ring-2 focus-within:ring-brand-sage"
               >
                 {/* Ícone com fundo com brand color */}
                 <div className="p-3 bg-neutral-50 border border-neutral-100 text-brand-dark group-hover:bg-brand-sage/10 group-hover:text-brand-sage group-hover:border-brand-sage/10 rounded-none w-fit transition-all duration-300 mb-6">

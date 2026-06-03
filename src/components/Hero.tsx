@@ -23,7 +23,7 @@ export default function Hero({ onOpenModal }: HeroProps) {
   return (
     <section 
       id="hero" 
-      className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-brand-light"
+      className="relative pt-28 pb-14 md:pt-36 md:pb-24 overflow-hidden bg-brand-light"
     >
       {/* Decorative subtle visual elements to represent high-end aesthetics without CLS */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-sage/5 rounded-full blur-3xl pointer-events-none" />
@@ -80,7 +80,7 @@ export default function Hero({ onOpenModal }: HeroProps) {
             </div>
 
             {/* Selos de Confiança (Segurança, Profissionalismo, etc.) */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-4 pt-10 border-t border-brand-dark/5">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-4 pt-8 border-t border-brand-dark/5">
               <div id="hero-badge-1" className="flex items-center space-x-2.5">
                 <div className="p-2 bg-[#C5A880]/10 text-brand-gold rounded-full">
                   <ShieldCheck className="h-5 w-5" />

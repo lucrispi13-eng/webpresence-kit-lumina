@@ -33,11 +33,11 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-24 bg-brand-light relative">
+    <section id="faq" className="py-16 md:py-20 bg-brand-light relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Cabeçalho */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <span className="text-[11px] font-sans font-bold tracking-[0.25em] text-brand-gold uppercase block mb-3">
             Dúvidas Frequentes
           </span>

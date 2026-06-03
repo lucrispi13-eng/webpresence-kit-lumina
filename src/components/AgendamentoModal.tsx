@@ -116,11 +116,11 @@ export default function AgendamentoModal({ isOpen, onClose }: AgendamentoModalPr
         </div>
 
         {/* Formulário de 3 Passos */}
-        <form onSubmit={step === 3 ? handleSubmit : handleNextStep} className="space-y-6">
+        <form onSubmit={step === 3 ? handleSubmit : handleNextStep} className="space-y-4">
           
           {/* PASSO 1: NOME COMPLETO */}
           {step === 1 && (
-            <div className="flex flex-col space-y-2 animate-fade-in">
+            <div className="flex flex-col space-y-1.5 animate-fade-in">
               <label htmlFor="modal-name-step" className="text-[10px] uppercase font-sans tracking-widest text-[#C5A880] font-bold">
                 Como gostaria de ser chamado(a)?
               </label>
@@ -132,17 +132,17 @@ export default function AgendamentoModal({ isOpen, onClose }: AgendamentoModalPr
                 placeholder="Nome completo"
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
-                className="py-3 bg-transparent border-t-0 border-x-0 border-b border-neutral-300 focus:border-[#7A8B7B] focus:ring-0 font-sans text-sm text-brand-dark placeholder-neutral-400 focus:outline-none transition-colors"
+                className="py-2 bg-transparent border-t-0 border-x-0 border-b border-neutral-300 focus:border-[#7A8B7B] focus:ring-0 font-sans text-sm text-brand-dark placeholder-neutral-400 focus:outline-none transition-colors"
               />
-              <p className="text-[10px] text-brand-muted font-sans italic pt-1">
+              <p className="text-[10px] text-brand-muted font-sans italic pt-0.5">
                 Utilizamos seu nome para personalizar sua jornada.
               </p>
             </div>
           )}
-
+ 
           {/* PASSO 2: WHATSAPP */}
           {step === 2 && (
-            <div className="flex flex-col space-y-2 animate-fade-in">
+            <div className="flex flex-col space-y-1.5 animate-fade-in">
               <label htmlFor="modal-phone-step" className="text-[10px] uppercase font-sans tracking-widest text-[#C5A880] font-bold">
                 Qual o seu WhatsApp de contato?
               </label>
@@ -154,17 +154,17 @@ export default function AgendamentoModal({ isOpen, onClose }: AgendamentoModalPr
                 placeholder="Ex: (11) 99999-9999"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="py-3 bg-transparent border-t-0 border-x-0 border-b border-neutral-300 focus:border-[#7A8B7B] focus:ring-0 font-sans text-sm text-brand-dark placeholder-neutral-400 focus:outline-none transition-colors"
+                className="py-2 bg-transparent border-t-0 border-x-0 border-b border-neutral-300 focus:border-[#7A8B7B] focus:ring-0 font-sans text-sm text-brand-dark placeholder-neutral-400 focus:outline-none transition-colors"
               />
-              <p className="text-[10px] text-brand-muted font-sans italic pt-1">
+              <p className="text-[10px] text-brand-muted font-sans italic pt-0.5">
                 Enviaremos a confirmação dos horários disponíveis por aqui.
               </p>
             </div>
           )}
-
+ 
           {/* PASSO 3: OBJETIVO */}
           {step === 3 && (
-            <div className="flex flex-col space-y-2 animate-fade-in">
+            <div className="flex flex-col space-y-1.5 animate-fade-in">
               <label htmlFor="modal-objective-step" className="text-[10px] uppercase font-sans tracking-widest text-[#C5A880] font-bold">
                 Qual o seu principal objetivo?
               </label>
@@ -172,26 +172,26 @@ export default function AgendamentoModal({ isOpen, onClose }: AgendamentoModalPr
                 id="modal-objective-step"
                 value={objetivo}
                 onChange={(e) => setObjetivo(e.target.value)}
-                className="py-3 bg-transparent border-t-0 border-x-0 border-b border-neutral-300 focus:border-[#7A8B7B] focus:ring-0 font-sans text-sm text-brand-dark focus:outline-none cursor-pointer"
+                className="py-2 bg-transparent border-t-0 border-x-0 border-b border-neutral-300 focus:border-[#7A8B7B] focus:ring-0 font-sans text-sm text-brand-dark focus:outline-none cursor-pointer"
               >
                 <option value="Harmonização">Harmonização Facial</option>
                 <option value="Bioestimuladores">Rejuvenescimento / Bioestimuladores</option>
                 <option value="Laser/Manchas">Laser Lavieen / Ultraformer III</option>
                 <option value="Outros">Outras Inquietudes Estéticas</option>
               </select>
-              <p className="text-[10px] text-brand-muted font-sans italic pt-1">
+              <p className="text-[10px] text-brand-muted font-sans italic pt-0.5">
                 Isso ajuda nosso especialista a preparar sua pré-avaliação.
               </p>
             </div>
           )}
-
+ 
           {/* NAVEGAÇÃO DOS PASSOS */}
-          <div className="flex items-center space-x-3 pt-4">
+          <div className="flex items-center space-x-3 pt-3">
             {step > 1 && (
               <button
                 type="button"
                 onClick={handlePrevStep}
-                className="flex items-center justify-center space-x-2 border border-neutral-300 hover:border-neutral-400 text-brand-dark py-3.5 px-4 font-sans text-xs tracking-widest uppercase transition-all duration-300"
+                className="flex items-center justify-center space-x-2 border border-neutral-300 hover:border-neutral-400 text-brand-dark py-3 px-4 font-sans text-xs tracking-widest uppercase transition-all duration-300"
               >
                 <ArrowLeft className="h-3.5 w-3.5" />
               </button>
@@ -199,7 +199,7 @@ export default function AgendamentoModal({ isOpen, onClose }: AgendamentoModalPr
             
             <button
               type="submit"
-              className="flex-grow flex items-center justify-center space-x-2 bg-brand-sage hover:bg-brand-sage-hover text-brand-light font-sans text-xs tracking-widest uppercase font-semibold py-3.5 px-6 shadow-md transition-all duration-300 cursor-pointer"
+              className="flex-grow flex items-center justify-center space-x-2 bg-brand-sage hover:bg-brand-sage-hover text-brand-light font-sans text-xs tracking-widest uppercase font-semibold py-3 px-6 shadow-md transition-all duration-300 cursor-pointer"
             >
               {step < 3 ? (
                 <>
