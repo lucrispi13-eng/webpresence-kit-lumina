@@ -32,7 +32,7 @@ export default function Diferenciais() {
   return (
     <section 
       id="diferenciais" 
-      className="py-16 md:py-20 bg-neutral-50/50 border-t border-b border-neutral-100"
+      className="pt-10 pb-16 md:pt-12 md:pb-20 bg-neutral-50/50 border-t border-b border-neutral-100"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         

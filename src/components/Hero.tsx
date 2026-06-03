@@ -23,7 +23,7 @@ export default function Hero({ onOpenModal }: HeroProps) {
   return (
     <section 
       id="hero" 
-      className="relative pt-28 pb-14 md:pt-36 md:pb-24 overflow-hidden bg-brand-light"
+      className="relative pt-28 pb-8 md:pt-36 md:pb-12 overflow-hidden bg-brand-light"
     >
       {/* Decorative subtle visual elements to represent high-end aesthetics without CLS */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand-sage/5 rounded-full blur-3xl pointer-events-none" />
@@ -134,13 +134,13 @@ export default function Hero({ onOpenModal }: HeroProps) {
               />
 
               {/* Badges de Destaque sobre a Imagem */}
-              <div className="absolute bottom-6 left-6 right-6 bg-brand-light/95 backdrop-blur-md p-4 border border-brand-gold/20 flex items-center justify-between z-20">
-                <div className="flex flex-col">
+              <div className="absolute bottom-6 left-6 right-6 bg-brand-light/95 backdrop-blur-md p-4 border border-brand-gold/20 flex items-center justify-between gap-4 z-20">
+                <div className="flex flex-col whitespace-nowrap">
                   <span className="text-[10px] text-brand-muted font-sans uppercase tracking-[0.2em]">Tecnologia</span>
                   <span className="text-sm text-brand-dark font-serif font-semibold">Fotona & Ultraformer III</span>
                 </div>
-                <div className="h-8 w-[1px] bg-neutral-200" />
-                <div className="flex flex-col items-end">
+                <div className="h-8 w-[1px] bg-neutral-200 mx-4 sm:mx-6 shrink-0" />
+                <div className="flex flex-col items-end whitespace-nowrap">
                   <span className="text-[10px] text-brand-muted font-sans uppercase tracking-[0.2em]">Padrão</span>
                   <span className="text-sm text-brand-sage font-sans font-semibold">Fino e Natural</span>
                 </div>

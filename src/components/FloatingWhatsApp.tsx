@@ -16,7 +16,7 @@ export default function FloatingWhatsApp({ onOpenModal }: FloatingWhatsAppProps)
     <button
       onClick={handleClick}
       id="floating-whatsapp-btn"
-      className="fixed bottom-6 right-6 z-45 flex items-center justify-center w-14 h-14 bg-brand-sage hover:bg-brand-sage-hover text-brand-light shadow-xl hover:shadow-2xl transition-all duration-300 animate-whatsapp-pulse group focus:outline-none focus:ring-4 focus:ring-[#7A8B7B]/30 cursor-pointer"
+      className="fixed bottom-6 right-6 z-50 rounded-full w-14 h-14 flex items-center justify-center bg-brand-sage hover:bg-brand-sage-hover text-brand-light shadow-xl hover:shadow-2xl transition-all duration-300 animate-whatsapp-pulse group focus:outline-none focus:ring-4 focus:ring-[#7A8B7B]/30 cursor-pointer"
       aria-label="Fale conosco para agendar sua consulta na Lumina"
     >
       <MessageSquare className="h-6 w-6 transform group-hover:rotate-12 duration-300 transition-transform" />
