@@ -1,0 +1,6 @@
+{
+  "name": "Lumina Estética Avançada",
+  "description": "Landing page de altíssima conversão e performance premium para a clínica de estética Lumina, focada em resultados e sofisticação.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
