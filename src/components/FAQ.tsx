@@ -33,25 +33,25 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-16 md:py-20 bg-brand-light relative">
+    <section id="faq" className="pt-4 pb-8 md:pt-5 md:pb-8 bg-brand-light relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Cabeçalho */}
-        <div className="text-center mb-12">
-          <span className="text-[11px] font-sans font-bold tracking-[0.25em] text-brand-gold uppercase block mb-3">
+         
+         {/* Cabeçalho */}
+         <div className="text-center mb-4">
+          <span className="text-[11px] font-sans font-bold tracking-[0.25em] text-brand-gold uppercase block mb-1.5">
             Dúvidas Frequentes
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl text-brand-dark tracking-tight font-medium">
+          <h2 className="font-serif text-2xl sm:text-3xl text-brand-dark tracking-tight font-medium">
             Perguntas & Esclarecimentos
           </h2>
-          <div className="h-[2px] w-12 bg-brand-sage mx-auto mt-6" />
-          <p className="font-sans text-sm text-brand-muted mt-4 max-w-2xl mx-auto">
+          <div className="h-[2px] w-12 bg-brand-sage mx-auto mt-2" />
+          <p className="font-sans text-xs sm:text-xs text-brand-muted mt-1.5 max-w-2xl mx-auto">
             Acreditamos na transparência absoluta. Se você possuir alguma outra dúvida específica, nossa equipe está pronta para atendê-la de forma ágil via WhatsApp.
           </p>
         </div>
 
         {/* Accordions em JS Puro/React */}
-        <div className="space-y-4">
+        <div className="space-y-2">
           {perguntas.map((item, index) => {
             const isOpen = openIndex === index;
             return (
@@ -64,19 +64,19 @@ export default function FAQ() {
                 <button
                   type="button"
                   onClick={() => toggleAccordion(index)}
-                  className="w-full text-left px-6 py-5 sm:px-8 sm:py-6 flex justify-between items-center bg-[#FAFAFA] hover:bg-neutral-50/80 transition-colors focus:outline-none"
+                  className="w-full text-left px-4 py-3 sm:px-5 sm:py-3.5 flex justify-between items-center bg-[#FAFAFA] hover:bg-neutral-50/80 transition-colors focus:outline-none"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
                 >
-                  <span className="font-serif text-sm sm:text-base font-semibold text-brand-dark hover:text-brand-sage transition-colors pr-4 flex items-center gap-3">
-                    <HelpCircle className="h-4.5 w-4.5 text-brand-gold shrink-0" />
+                  <span className="font-serif text-xs sm:text-sm font-semibold text-brand-dark hover:text-brand-sage transition-colors pr-4 flex items-center gap-2">
+                    <HelpCircle className="h-4 w-4 text-brand-gold shrink-0" />
                     <span>{item.question}</span>
                   </span>
-                  <div className="shrink-0 p-1 border border-neutral-200 text-brand-muted rounded-none bg-brand-light">
+                  <div className="shrink-0 p-1 border border-neutral-200 text-brand-muted bg-brand-light">
                     {isOpen ? (
-                      <Minus className="h-4 w-4 text-brand-sage" />
+                      <Minus className="h-3.5 w-3.5 text-brand-sage" />
                     ) : (
-                      <Plus className="h-4 w-4 text-brand-dark" />
+                      <Plus className="h-3.5 w-3.5 text-brand-dark" />
                     )}
                   </div>
                 </button>
@@ -88,7 +88,7 @@ export default function FAQ() {
                     isOpen ? "max-h-72 opacity-100 border-t border-neutral-100" : "max-h-0 opacity-0 bg-transparent"
                   }`}
                 >
-                  <div className="px-6 py-5 sm:px-8 sm:py-6 font-sans text-xs sm:text-sm text-brand-muted leading-relaxed">
+                  <div className="px-4 py-3 sm:px-5 sm:py-3.5 font-sans text-xs text-brand-muted leading-relaxed">
                     {item.answer}
                   </div>
                 </div>

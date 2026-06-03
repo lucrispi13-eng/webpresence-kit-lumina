@@ -39,7 +39,7 @@ export default function Depoimentos() {
   ];
 
   return (
-    <section id="depoimentos" className="py-16 md:py-20 bg-neutral-50/50 relative overflow-hidden">
+    <section id="depoimentos" className="pt-6 pb-10 md:pt-8 md:pb-12 bg-neutral-50/50 relative overflow-hidden">
       
       {/* Elementos visuais discretos decorativos */}
       <div className="absolute top-1/2 left-0 w-72 h-72 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none" />
@@ -47,63 +47,63 @@ export default function Depoimentos() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Cabeçalho da Seção */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between mb-12 gap-8 text-center lg:text-left">
+        <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between mb-6 gap-6 text-center lg:text-left">
           <div className="max-w-2xl">
-            <span className="text-[11px] font-sans font-bold tracking-[0.25em] text-brand-gold uppercase block mb-3">
+            <span className="text-[11px] font-sans font-bold tracking-[0.25em] text-brand-gold uppercase block mb-2">
               Elite em Depoimentos
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl text-brand-dark tracking-tight font-medium">
+            <h2 className="font-serif text-2xl sm:text-3xl text-brand-dark tracking-tight font-medium">
               Quem vive a experiência Lumina recomenda
             </h2>
-            <div className="h-[2px] w-12 bg-brand-sage mt-6 mx-auto lg:mx-0" />
+            <div className="h-[2px] w-12 bg-brand-sage mt-3 mx-auto lg:mx-0" />
           </div>
 
           {/* Resumo do Google Reviews */}
-          <div className="bg-brand-light border border-neutral-200 p-6 flex items-center space-x-4 shadow-sm self-center">
+          <div className="bg-brand-light border border-neutral-200 p-4 flex items-center space-x-3 shadow-sm self-center">
             <div className="flex flex-col items-center">
-              <span className="font-serif text-3xl text-brand-dark font-semibold">4.9</span>
-              <div className="flex text-brand-gold mt-1">
+              <span className="font-serif text-2xl text-brand-dark font-semibold">4.9</span>
+              <div className="flex text-brand-gold mt-0.5">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-3.5 w-3.5 fill-current" />
+                  <Star key={i} className="h-3 w-3 fill-current" />
                 ))}
               </div>
             </div>
-            <div className="h-10 w-[1px] bg-neutral-200" />
+            <div className="h-8 w-[1px] bg-neutral-200" />
             <div className="flex flex-col">
-              <span className="font-sans text-xs font-bold text-brand-dark uppercase tracking-wider flex items-center gap-1.5">
+              <span className="font-sans text-[10px] font-bold text-brand-dark uppercase tracking-wider flex items-center gap-1">
                 Google Reviews
-                <CheckCircle className="h-3.5 w-3.5 text-brand-sage fill-current text-white bg-blend-normal" />
+                <CheckCircle className="h-3 w-3 text-brand-sage fill-current text-white bg-blend-normal" />
               </span>
-              <span className="font-sans text-2xs text-brand-muted mt-0.5">Baseado em 184 avaliações reais</span>
+              <span className="font-sans text-[9px] text-brand-muted mt-0.5">Baseado em 184 avaliações reais</span>
             </div>
           </div>
         </div>
 
         {/* Grid de Depoimentos */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {avaliacoes.map((dep) => (
             <div
               key={dep.id}
               id={dep.id}
-              className="bg-brand-light border border-neutral-200/60 p-8 hover:border-brand-sage/20 transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between"
+              className="bg-brand-light border border-neutral-200/60 p-5 sm:p-6 hover:border-brand-sage/20 transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between"
             >
               <div>
                 {/* 5 Estrelas douradas */}
-                <div className="flex text-brand-gold mb-6">
+                <div className="flex text-brand-gold mb-3">
                   {[...Array(dep.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-current" />
+                    <Star key={i} className="h-3.5 w-3.5 fill-current" />
                   ))}
                 </div>
 
                 {/* Texto do depoimento */}
-                <blockquote className="font-sans text-xs sm:text-sm text-brand-dark leading-relaxed italic mb-8">
+                <blockquote className="font-sans text-xs sm:text-xs text-brand-dark leading-relaxed italic mb-4">
                   "{dep.text}"
                 </blockquote>
               </div>
 
               {/* Informações do Cliente */}
-              <div className="flex items-center space-x-4 pt-6 border-t border-neutral-100 mt-auto">
-                <div className="w-11 h-11 rounded-none overflow-hidden bg-neutral-200">
+              <div className="flex items-center space-x-3 pt-4 border-t border-neutral-100 mt-auto">
+                <div className="w-9 h-9 rounded-none overflow-hidden bg-neutral-200">
                   {/* TODO: Substituir url por import de @/assets/depoimento-${dep.id}.webp para performance 100/100 no Lighthouse */}
                   <img
                     src={dep.avatar}

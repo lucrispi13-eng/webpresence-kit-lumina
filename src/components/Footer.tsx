@@ -15,8 +15,8 @@ export default function Footer() {
     <footer className="bg-brand-dark text-[#D4D4D4] font-sans selection:bg-brand-gold/20 selection:text-brand-gold">
       
       {/* Corpo principal do Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 border-b border-neutral-800 pb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-9">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-5 border-b border-neutral-800 pb-6">
           
           {/* Col 1: Lumina Brand Identity & Descrição (4 cols) */}
           <div className="lg:col-span-5 space-y-6">
@@ -179,7 +179,7 @@ export default function Footer() {
 
       {/* Sub-Footer: Contém os dados burocráticos obrigatórios (CNPJ, Prop de Direitos, CRM RQE) */}
       <div className="bg-[#171717] text-neutral-500 font-sans text-[11px] sm:text-xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             
             {/* Informações Técnicas Médicas */}

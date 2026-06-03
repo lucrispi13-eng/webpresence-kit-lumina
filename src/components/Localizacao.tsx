@@ -10,66 +10,66 @@ export default function Localizacao() {
   };
 
   return (
-    <section id="localizacao" className="py-16 md:py-20 bg-neutral-50/50 border-t border-neutral-100">
+    <section id="localizacao" className="pt-4 pb-8 md:pt-5 md:pb-8 bg-neutral-50/50 border-t border-neutral-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Cabeçalho */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-[11px] font-sans font-bold tracking-[0.25em] text-brand-gold uppercase block mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-6">
+          <span className="text-[11px] font-sans font-bold tracking-[0.25em] text-brand-gold uppercase block mb-1.5">
             Onde Estamos
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl text-brand-dark tracking-tight font-medium">
+          <h2 className="font-serif text-2xl sm:text-3xl text-brand-dark tracking-tight font-medium">
             Sua Experiência Exclusiva nos Jardins
           </h2>
-          <div className="h-[2px] w-12 bg-brand-sage mx-auto mt-6" />
-          <p className="font-sans text-sm text-brand-muted mt-4">
+          <div className="h-[2px] w-12 bg-brand-sage mx-auto mt-2" />
+          <p className="font-sans text-xs sm:text-sm text-brand-muted mt-2">
             Em localização privilegiada em São Paulo, nosso espaço foi inteiramente projetado para garantir privacidade máxima e conforto sensorial absoluto.
           </p>
         </div>
 
         {/* Bloco de Localização */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           
           {/* Card Detalhado de Acesso (5 cols) */}
-          <div className="lg:col-span-5 flex flex-col justify-between bg-brand-light border border-neutral-200/80 p-8 sm:p-10 shadow-sm relative">
+          <div className="lg:col-span-5 flex flex-col justify-between bg-brand-light border border-neutral-200/80 p-5 sm:p-6 shadow-sm relative">
             
-            <div className="space-y-8">
+            <div className="space-y-4">
               {/* Logo / Tag */}
-              <div className="flex items-center space-x-3 text-brand-sage">
-                <MapPin className="h-6 w-6 stroke-1.5" />
-                <span className="font-serif text-xl tracking-wide font-medium text-brand-dark">Localização Nobre</span>
+              <div className="flex items-center space-x-2 text-brand-sage">
+                <MapPin className="h-5 w-5 stroke-1.5" />
+                <span className="font-serif text-lg tracking-wide font-medium text-brand-dark">Localização Nobre</span>
               </div>
 
               {/* Endereço */}
-              <div className="space-y-2">
-                <p className="font-serif text-lg text-brand-dark font-semibold leading-snug">
+              <div className="space-y-1">
+                <p className="font-serif text-base text-brand-dark font-semibold leading-snug">
                   Alameda Lorena, 1500
                 </p>
-                <p className="font-sans text-xs sm:text-sm text-brand-muted leading-relaxed">
+                <p className="font-sans text-xs text-brand-muted leading-relaxed">
                   Cerqueira César, São Paulo - SP<br />
-                  CEP 01424-002 (Próximo aos melhores hotéis e lojas dos Jardins)
+                  CEP 01424-002 (Próximo aos Jardins)
                 </p>
               </div>
 
               {/* Serviços do Prédio */}
-              <div className="space-y-4 pt-6 border-t border-neutral-100 font-sans text-xs text-brand-dark/95">
-                <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-neutral-50 border border-neutral-100 text-brand-gold rounded-full">
-                    <Car className="h-4.5 w-4.5" />
+              <div className="space-y-2.5 pt-4 border-t border-neutral-100 font-sans text-xs text-brand-dark/95">
+                <div className="flex items-center space-x-2.5">
+                  <div className="p-1.5 bg-neutral-50 border border-neutral-100 text-brand-gold rounded-full">
+                    <Car className="h-4 w-4" />
                   </div>
                   <span>Serviço de Valet com Manobrista no Local</span>
                 </div>
 
-                <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-neutral-50 border border-neutral-100 text-brand-sage rounded-full">
-                    <Compass className="h-4.5 w-4.5" />
+                <div className="flex items-center space-x-2.5">
+                  <div className="p-1.5 bg-neutral-50 border border-neutral-100 text-brand-sage rounded-full">
+                    <Compass className="h-4 w-4" />
                   </div>
-                  <span>A 5 minutos a pé da Estação de Metrô Consolação</span>
+                  <span>A 5 minutos a pé do Metrô Consolação</span>
                 </div>
 
-                <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-neutral-50 border border-neutral-100 text-brand-gold rounded-full">
-                    <Clock className="h-4.5 w-4.5" />
+                <div className="flex items-center space-x-2.5">
+                  <div className="p-1.5 bg-neutral-50 border border-neutral-100 text-brand-gold rounded-full">
+                    <Clock className="h-4 w-4" />
                   </div>
                   <span>Atendimento estritamente com hora marcada</span>
                 </div>
@@ -77,16 +77,16 @@ export default function Localizacao() {
             </div>
 
             {/* Como Chegar - Direct Button */}
-            <div className="pt-8 mt-8 border-t border-neutral-100">
+            <div className="pt-4 mt-4 border-t border-neutral-100">
               <a
                 href="https://maps.google.com/?q=Alameda+Lorena+1500+Sao+Paulo"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleDirectionsClick}
                 id="location-directions-btn"
-                className="flex items-center justify-center space-x-3 w-full bg-brand-dark hover:bg-brand-sage text-brand-light font-sans text-xs tracking-widest uppercase font-semibold py-4 px-6 transition-all duration-300"
+                className="flex items-center justify-center space-x-2 w-full bg-brand-dark hover:bg-brand-sage text-brand-light font-sans text-2xs tracking-widest uppercase font-semibold py-3 px-4 transition-all duration-300"
               >
-                <Navigation className="h-4 w-4" />
+                <Navigation className="h-3.5 w-3.5" />
                 <span>Como Chegar (Google Maps)</span>
               </a>
             </div>

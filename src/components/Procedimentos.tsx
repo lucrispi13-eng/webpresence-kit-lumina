@@ -88,35 +88,35 @@ export default function Procedimentos({ onOpenModal }: ProcedimentosProps) {
   };
 
   return (
-    <section id="procedimentos" className="py-16 md:py-20 bg-brand-light relative z-20">
+    <section id="procedimentos" className="pt-6 pb-10 md:pt-8 md:pb-12 bg-brand-light relative z-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Cabeçalho */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-[11px] font-sans font-bold tracking-[0.25em] text-brand-gold uppercase block mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-6">
+          <span className="text-[11px] font-sans font-bold tracking-[0.25em] text-brand-gold uppercase block mb-2">
             Menu de Tratamentos
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl text-brand-dark tracking-tight font-medium">
+          <h2 className="font-serif text-2xl sm:text-3xl text-brand-dark tracking-tight font-medium w-full leading-tight">
             Procedimentos Avançados de Próxima Geração
           </h2>
-          <div className="h-[2px] w-12 bg-brand-sage mx-auto mt-6" />
-          <p className="font-sans text-sm text-brand-muted mt-4">
+          <div className="h-[2px] w-12 bg-brand-sage mx-auto mt-3" />
+          <p className="font-sans text-xs sm:text-sm text-brand-muted mt-2">
             Cada protocolo é ajustado meticulosamente à arquitetura do seu rosto, utilizando matéria-prima certificada internacionalmente e tecnologias padrão ouro.
           </p>
         </div>
 
         {/* Filtros das Categorias */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12 max-w-xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-1.5 mb-6 max-w-xl mx-auto">
           {[
             { id: "todos", label: "Todos os Procedimentos" },
             { id: "harmonizacao", label: "Harmonização" },
-            { id: "rejuvenescimento", label: "Rejuvenescimento" },
-            { id: "laser", label: "Tecnologia a Laser" }
+            { id: "rejuvenescimento", label: "Bioestimulação" },
+            { id: "laser", label: "Laser / Tecnologia" }
           ].map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-5 py-2.5 font-sans text-xs tracking-wider uppercase font-semibold transition-all duration-300 focus:outline-none ${
+              className={`px-3 py-1.5 font-sans text-[10px] tracking-wider uppercase font-semibold transition-all duration-300 focus:outline-none ${
                 activeCategory === cat.id
                   ? "bg-brand-sage text-brand-light shadow-sm"
                   : "bg-neutral-50 hover:bg-neutral-100 text-brand-dark/70 hover:text-brand-dark border border-neutral-200/50"
@@ -128,7 +128,7 @@ export default function Procedimentos({ onOpenModal }: ProcedimentosProps) {
         </div>
 
         {/* Grid dos Procedimentos */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {filteredProcedimentos.map((proc) => (
             <article 
               key={proc.id}
@@ -149,34 +149,34 @@ export default function Procedimentos({ onOpenModal }: ProcedimentosProps) {
                 />
                 
                 {/* Badge da Categoria */}
-                <span className="absolute top-4 left-4 bg-brand-light/95 backdrop-blur-md border border-neutral-200 px-3 py-1 text-[9px] font-sans font-bold tracking-widest text-brand-sage uppercase">
+                <span className="absolute top-3 left-3 bg-brand-light/95 backdrop-blur-md border border-neutral-200 px-2 py-0.5 text-[8px] font-sans font-bold tracking-widest text-brand-sage uppercase">
                   {proc.category === "harmonizacao" ? "Harmonização" : proc.category === "rejuvenescimento" ? "Bioestimulação" : "Laser / Tecnologia"}
                 </span>
               </div>
 
               {/* Corpo */}
-              <div className="p-8 flex flex-col flex-grow">
-                <h3 className="font-serif text-xl text-brand-dark font-medium mb-3 group-hover:text-brand-sage transition-colors duration-250">
+              <div className="p-5 flex flex-col flex-grow">
+                <h3 className="font-serif text-lg text-brand-dark font-medium mb-1.5 group-hover:text-brand-sage transition-colors duration-250">
                   {proc.title}
                 </h3>
                 
-                <p className="font-sans text-xs text-brand-muted leading-relaxed flex-grow mb-6">
+                <p className="font-sans text-xs text-brand-muted leading-relaxed flex-grow mb-4">
                   {proc.description}
                 </p>
 
                 {/* Duração / Sessão */}
-                <div className="flex items-center space-x-2 text-brand-gold/90 font-mono text-[11px] uppercase tracking-wider mb-6 pb-6 border-b border-neutral-200/40">
-                  <Clock className="h-4 w-4 text-brand-gold" />
+                <div className="flex items-center space-x-2 text-brand-gold/90 font-mono text-[10px] uppercase tracking-wider mb-4 pb-4 border-b border-neutral-200/40">
+                  <Clock className="h-3.5 w-3.5 text-brand-gold" />
                   <span>{proc.duration}</span>
                 </div>
 
                 {/* Link Saber mais */}
                 <button
                   onClick={() => openDetails(proc)}
-                  className="inline-flex items-center space-x-2 text-brand-sage hover:text-brand-sage-hover text-xs font-sans tracking-widest uppercase font-bold focus:outline-none cursor-pointer self-start group/btn"
+                  className="inline-flex items-center space-x-2 text-brand-sage hover:text-brand-sage-hover text-[11px] font-sans tracking-widest uppercase font-bold focus:outline-none cursor-pointer self-start group/btn"
                 >
                   <span>Saber mais</span>
-                  <ArrowRight className="h-4 w-4 transform group-hover/btn:translate-x-1.5 transition-transform" />
+                  <ArrowRight className="h-3.5 w-3.5 transform group-hover/btn:translate-x-1.5 transition-transform" />
                 </button>
               </div>
             </article>
